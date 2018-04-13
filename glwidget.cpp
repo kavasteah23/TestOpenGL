@@ -9,7 +9,7 @@ GLWidget::GLWidget(QWidget *parent) :
     //timer.start(16);
 }
 void GLWidget::initializeGL(){
-    glClearColor(.8, .2, .2, 1);
+    glClearColor(.2, .2, .2, 1);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_LIGHT0);
     glEnable(GL_LIGHTING);
