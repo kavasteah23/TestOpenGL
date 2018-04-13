@@ -22,6 +22,8 @@ public slots:
     void enableDepthTest(int state);
     void enableMSAA(int state);
     void enableGLight(int state);
+    void enableLight(int state);
+    void enableColorMat(int state);
 };
 
 #endif // GLWIDGET_H

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>507</width>
-    <height>389</height>
+    <width>646</width>
+    <height>553</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>9</x>
       <y>9</y>
-      <width>291</width>
-      <height>301</height>
+      <width>417</width>
+      <height>474</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -33,8 +33,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>288</y>
+      <x>470</x>
+      <y>410</y>
       <width>80</width>
       <height>25</height>
      </rect>
@@ -46,11 +46,23 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>10</y>
+      <x>434</x>
+      <y>11</y>
+      <width>201</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
       <width>201</width>
       <height>141</height>
-     </rect>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>20000</width>
+      <height>20000</height>
+     </size>
     </property>
     <property name="title">
      <string>Action</string>
@@ -74,7 +86,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -100,7 +112,7 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -126,7 +138,7 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -159,10 +171,17 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>507</width>
+     <width>646</width>
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionSettings"/>
+   </widget>
+   <addaction name="menuOptions"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -173,6 +192,11 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Render settings</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>

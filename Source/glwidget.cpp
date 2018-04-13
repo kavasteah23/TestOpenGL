@@ -1,4 +1,4 @@
-#include "glwidget.h"
+#include <glwidget.h>
 #include <GL/glut.h>
 
 GLWidget::GLWidget(QWidget *parent) :
@@ -10,10 +10,6 @@ GLWidget::GLWidget(QWidget *parent) :
 }
 void GLWidget::initializeGL(){
     glClearColor(.2, .2, .2, 1);
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_LIGHT0);
-    glEnable(GL_LIGHTING);
-    glEnable(GL_COLOR_MATERIAL);
 }
 
 void GLWidget::paintGL(){
@@ -36,4 +32,40 @@ void GLWidget::startAnimation(int state){
     if (state==Qt::Unchecked)
         timer.stop();
     else timer.start(16);
+}
+void GLWidget::enableDepthTest(int state){
+    if (state==Qt::Unchecked)
+        glDisable(GL_DEPTH_TEST);
+    else
+        glEnable(GL_DEPTH_TEST);
+    updateGL();
+}
+void GLWidget::enableMSAA(int state){
+    if (state==Qt::Unchecked)
+        glDisable(GL_MULTISAMPLE);
+    else
+        glEnable(GL_MULTISAMPLE);
+    updateGL();
+}
+void GLWidget::enableGLight(int state){
+    if (state==Qt::Unchecked)
+        glDisable(GL_LIGHT0);
+    else
+        glEnable(GL_LIGHT0);
+    updateGL();
+}
+void GLWidget::enableLight(int state){
+    if (state==Qt::Unchecked)
+        glDisable(GL_LIGHTING);
+    else
+        glEnable(GL_LIGHTING);
+    updateGL();
+}
+void GLWidget::enableColorMat(int state){
+    if (state==Qt::Unchecked){
+        glDisable(GL_COLOR_MATERIAL);
+    }
+    else
+        glEnable(GL_COLOR_MATERIAL);
+    updateGL();
 }

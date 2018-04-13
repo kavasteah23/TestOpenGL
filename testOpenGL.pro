@@ -14,11 +14,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         Source/mainwindow.cpp \
-    Source/glwidget.cpp
+    Source/glwidget.cpp \
+    Source/rendersettings.cpp
 
 HEADERS  += Include/mainwindow.h \
-    Include/glwidget.h
+    glwidget.h \
+    rendersettings.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    rendersettings.ui
 
 LIBS += -lglut -glut -lGL -lGLU
