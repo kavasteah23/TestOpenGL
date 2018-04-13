@@ -1,2 +1,2 @@
 # TestOpenGL
-Testujemy gita i OpenGLa
+Testowanie Qt wraz z systemem kontroli wersji
