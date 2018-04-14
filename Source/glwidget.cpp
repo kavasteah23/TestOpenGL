@@ -10,6 +10,10 @@ GLWidget::GLWidget(QWidget *parent) :
 }
 void GLWidget::initializeGL(){
     glClearColor(.2, .2, .2, 1);
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_COLOR_MATERIAL);
 }
 
 void GLWidget::paintGL(){

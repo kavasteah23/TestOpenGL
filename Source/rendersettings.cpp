@@ -8,6 +8,10 @@ RenderSettings::RenderSettings(QWidget *parent) :
     ui->setupUi(this);
     //connect(ui->DepthTestBox, SIGNAL(stateChanged(int)), , SLOT(startAnimation(int)));
     //connect(ui->DepthTestBox,SIGNAL(stateChanged(int)),this,SLOT(sendEnableDepthTest(int)));
+    ui->colMaterialBox->setChecked(true);
+    ui->DepthTestBox->setChecked(true);
+    ui->globLightBox->setChecked(true);
+    ui->lightBox->setChecked(true);
 
 }
 
